@@ -68,8 +68,8 @@ classifier.fit(
 
 # Part 3 - Making new predictions
 # Use o caminho da imagem como argumento opcional:
-# python cnn.py dataset/single_prediction/pizza/12718.jpg
-DEFAULT_IMAGE = os.path.join('dataset', 'single_prediction', 'pizza', '12718.jpg')
+# python cnn.py single_prediction/pizza/12718.jpg
+DEFAULT_IMAGE = os.path.join('single_prediction', 'pizza', '12718.jpg')
 
 if len(sys.argv) > 1:
     image_path = sys.argv[1]
@@ -79,7 +79,7 @@ else:
     else:
         image_path = None
         for label in ['pizza', 'not_pizza']:
-            folder = os.path.join('dataset', 'single_prediction', label)
+            folder = os.path.join('single_prediction', label)
             if os.path.isdir(folder):
                 files = [f for f in os.listdir(folder) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
                 if files:
@@ -87,12 +87,12 @@ else:
                     break
         if image_path is None:
             raise FileNotFoundError(
-                'Nenhuma imagem de predição encontrada em dataset/single_prediction/pizza ou not_pizza. '
-                'Coloque uma imagem em dataset/single_prediction/pizza/ ou dataset/single_prediction/not_pizza/ '
+                'Nenhuma imagem de predição encontrada em single_prediction/pizza ou single_prediction/not_pizza. '
+                'Coloque uma imagem em single_prediction/pizza/ ou single_prediction/not_pizza/ '
                 'ou passe o caminho como argumento.'
             )
 
-print(f'Usando imagem para predição: {image_path}')
+print(f'Usando imagem para predicao: {image_path}')
 
 test_image = image.load_img(image_path, target_size=(64, 64))
 

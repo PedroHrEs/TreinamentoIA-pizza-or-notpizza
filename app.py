@@ -18,7 +18,7 @@ BATCH_SIZE = 32
 
 INITIAL_EPOCHS = 8
 FINE_TUNE_EPOCHS = 5
-DEFAULT_IMAGE = 'dataset/single_prediction/pizza/12718.jpg'
+DEFAULT_IMAGE = 'single_prediction/pizza/12718.jpg'
 MODEL_PATH = 'models/pizza_notpizza_mobilenetv2.keras'
 CLASS_INDEX_PATH = 'models/class_indices.json'
 
@@ -215,4 +215,4 @@ if __name__ == '__main__':
 
 # python3 app.py --mode train
 
-#python3 app.py --mode predict --image dataset/single_prediction/pizza/12718.jpg
+#python3 app.py --mode predict --image single_prediction/pizza/12718.jpg

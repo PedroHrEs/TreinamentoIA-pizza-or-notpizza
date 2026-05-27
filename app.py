@@ -213,6 +213,9 @@ def main():
 if __name__ == '__main__':
   main()
 
-# python3 app.py --mode train
+# python app.py --mode train
 
-#python3 app.py --mode predict --image single_prediction/pizza/12718.jpg
+#python app.py --mode predict --image single_prediction/pizza/12718.jpg
+#python app.py --mode predict --image single_prediction/pizza/13983.jpg
+#python app.py --mode predict --image single_prediction/not_pizza/117282.jpg
+#python app.py --mode predict --image single_prediction/not_pizza/123191.jpg
